@@ -1,0 +1,56 @@
+<?php echo $this->doctype() ?>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <?php echo $this->headTitle() ?>
+
+    <?php echo $this->headMeta() ?>
+
+    <!-- Le styles -->
+    <?php echo $this->headLink() ?>
+    
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <?php echo $this->placeholder('html5js') ?>
+    <![endif]-->
+
+    <?php echo $this->headScript() ?>
+
+    <!-- Le fav and touch icons -->
+    <?php echo $this->placeholder('favicon') ?>
+
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="<?php echo $this->url('home') ?>">ZF2 Sample Application</a>
+          <ul class="nav">
+            <li><a href="<?php echo $this->url('home') ?>">Home</a></li>
+            <li><a href="<?php echo $this->url('default', array("controller" => 'album')) ?>">Album</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <?php echo $this->raw('content'); ?>
+
+      <footer>
+        <p>Zend Framework 2 - Sample Application</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
